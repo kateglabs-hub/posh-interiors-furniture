@@ -17,6 +17,16 @@ const products = [
   { name: "The Kipepeo Lounge Chair", category: "Armchairs", group: "Armchairs", image: "/manus-storage/posh-furniture_66a3670d.jpg" },
   { name: "Mara Travertine Table", category: "Coffee Tables", group: "Tables", image: "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=900&q=85" },
   { name: "The Nia Console", category: "Console Tables", group: "Tables", image: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=85" },
+  { name: "Zuri Modular Sofa", category: "Sofas", group: "Sofas", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=85" },
+  { name: "Amani Upholstered Bed", category: "Beds", group: "Beds", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=85" },
+  { name: "Lamu Outdoor Lounge", category: "Outdoor Furniture", group: "Outdoor", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" },
+  { name: "Linen Ripple-Fold Curtains", category: "Curtains", group: "Curtains & Rods", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=85" },
+  { name: "Hand-finished Brass Curtain Rod", category: "Curtain Rods", group: "Curtains & Rods", image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85" },
+  { name: "Karura Executive Desk", category: "Office Furniture", group: "Office Furniture", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85" },
+  { name: "Clearline Glass Lectern", category: "Glass Lecterns", group: "Glass Lecterns", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=85" },
+  { name: "Maasai Handwoven Rug", category: "Carpets & Rugs", group: "Carpets & Rugs", image: "https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=900&q=85" },
+  { name: "Brass Picture Light", category: "Fittings", group: "Fittings", image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=900&q=85" },
+  { name: "Sculpted Gypsum Ceiling", category: "Gypsum & Ceilings", group: "Gypsum & Ceilings", image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" },
 ];
 
 const projects = [
@@ -39,7 +49,7 @@ function SectionLabel({ number, children }: { number: string; children: string }
 export default function Home() {
   const [menu, setMenu] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All pieces");
-  const categories = ["All pieces", "Sofas", "Tables", "Armchairs", "Beds", "Outdoor"];
+  const categories = ["All pieces", "Sofas", "Tables", "Armchairs", "Beds", "Outdoor", "Curtains & Rods", "Office Furniture", "Glass Lecterns", "Carpets & Rugs", "Fittings", "Gypsum & Ceilings"];
   const filteredProducts = activeCategory === "All pieces"
     ? products
     : products.filter(product => product.group === activeCategory);
